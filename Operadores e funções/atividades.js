@@ -25,4 +25,10 @@ function nome() {
 }
 nome()
 
+function verificacao() {
+    let frase = prompt("Digite a frase:");
+    console.log(frase.includes("HTML"));
+}
+verificacao()
+
 
