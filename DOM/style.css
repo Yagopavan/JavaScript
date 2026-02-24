@@ -1,0 +1,14 @@
+button {
+   background-color: #19b5ff;
+   padding: 18px 60px ;
+   border-radius: 25px;
+   font-size: large;
+   border: 5px solid #1a4052;
+   color: white;
+   cursor: pointer;
+}
+.destaque {
+    background-color: tomato;
+    font-size: large;
+    border: 10px solid black ;
+}
