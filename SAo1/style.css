@@ -6,12 +6,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('fundo.png');
-    background-repeat: no-repeat;
-    background-size: 100%;
+    background-color: lavender;
 }
 
 input {
+    /* Parte que o usuario insere as informações, como nome, email, senha e telefone. */
     padding: 5px;
     width: 200px;
     border-radius: 7px;
@@ -20,20 +19,54 @@ input {
     line-height: 35px;
 }
 
-.cad { /*Criei uma div para estilizar a parte do formulario */
+input:hover {
+    border: solid grey 1px;
+}
+
+.cad {
+    /*Criei uma div para estilizar a parte do formulario */
     border: 1px solid lightgrey;
     width: 250px;
     height: auto;
     border-radius: 7px;
     text-align: center;
     padding: 50px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: lavenderblush;
     position: relative;
+    box-shadow: 7px 6px 6px lightgray;
 }
-.icone { /* icone para mostrar e esconder a senha */
+
+.senha1 {
     font-size: 20px;
     cursor: pointer;
     position: relative;
-    right: 5%;
-    top: 25%;
+
+}
+
+.senha2 {
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.icone {
+    /* Essa parte é responsavel por colocar o icone de revelar a senha no lugar certo. */
+    position: absolute;
+    left: 80%;
+    top: 15%;
+}
+
+#cadastrar {
+    padding: 10px;
+    width: 99px;
+    height: auto;
+    border-radius: 7px;
+    border: 1px solid lavender;
+    background-color: lavender;
+}
+
+.button:hover {
+    background-color: lavenderblush;
+    cursor: pointer;
+    border: grey solid 1px;
 }

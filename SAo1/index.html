@@ -14,14 +14,20 @@
         <br>
         <form>
 
-            <input type="text" id="nome" placeholder="Digite seu nome"><br><br>
+            <input type="text" id="nome" placeholder="Digite seu nome"><br><br> <!--Utilizei o placeholder para poder colocar o texto dentro do input-->
 
             <input type="text" id="email" placeholder="Digite seu email"><br><br>
-            <i class="bi bi-eye-fill icone" id="botaosenha"></i> <!--icone para mostrar e esconder senha-->
-            <input type="password" id="senha" placeholder="Digite sua senha"><br><br>
-            <i class="bi bi-eye-fill icone" id="botaosenha"></i>
-            <input type="password" id="senha" placeholder="Confirme sua senha"><br><br>
-            
+            <alert id="alerta"></alert>
+            <div class="senha1"><!-- Criei essa div para ajustar o icone de revelar a senha.-->
+                <i class="bi bi-eye-fill icone" id="botaosenha"></i> <!--icone para mostrar e esconder senha-->
+                <input type="password" id="senha" placeholder="Digite sua senha"><br><br>
+            </div>
+
+            <div class="senha2">
+                <i class="bi bi-eye-fill icone" id="botaosenha2"></i>
+                <input type="password" id="senha2" placeholder="Confirme sua senha"><br><br>
+            </div>
+
             <input type="text" id="telefone" placeholder="Digite seu telefone"><br><br>
 
             <button type="button" id="cadastrar">Cadastrar</button>
