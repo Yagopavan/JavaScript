@@ -56,17 +56,23 @@ input:hover {
     top: 15%;
 }
 
-#cadastrar {
+#cadastrar, #adicionar-telefone, .remover-telefone {
     padding: 10px;
     width: 99px;
     height: auto;
     border-radius: 7px;
     border: 1px solid lavender;
     background-color: lavender;
+    cursor: pointer;
 }
 
-.button:hover {
+#cadastrar:hover, #adicionar-telefone:hover, .remover-telefone:hover {
     background-color: lavenderblush;
-    cursor: pointer;
     border: grey solid 1px;
 }
+
+.logo {
+    height: 120px;
+    padding: 2px;
+    padding: 0px;
+}   
