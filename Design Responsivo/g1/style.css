@@ -1,0 +1,782 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F5E6D3;
+    height: 12vh;
+    font-family: sans-serif;
+    border-bottom: 7px solid #C68642;
+}
+
+.icone {
+    justify-self: start;
+    font-size: 250%;
+    margin-left: 20px;
+}
+
+
+.icone:hover {
+    cursor: pointer;
+}
+
+#logo {
+    width: 21%
+}
+
+
+#menu {
+    display: flex;
+    font-size: 85%;
+    font-weight: bold;
+    gap: 50px;
+    align-items: center;
+    color: #4B2E2B;
+    list-style: none;
+    justify-self: end;
+    margin-right: 20px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #4B2E2B;
+    font-weight: bold;
+}
+
+.hero {
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.7),
+            /* escuro na esquerda */
+            rgba(0, 0, 0, 0)
+            /* transparente na direita */
+        ),
+        url("img/chocolate_cake_high_res.png");
+
+    background-size: cover;
+    height: 90vh;
+}
+
+#iconeCacau {
+    width: 5%;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 60px 48px;
+    gap: 40px;
+    width: 100%;
+}
+
+.hero-text {
+    margin-left: 5%;
+    width: 28%;
+    margin-bottom: 10%;
+}
+
+.hero-badge {
+    color: #C68642;
+    width: 150%;
+    font-size: 1.20rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 4%;
+    font-weight: bold;
+}
+
+.coracaoHero {
+    color: #C68642;
+    font-size: 3.5rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: #F5E6D3;
+    width: 130%;
+    line-height: 1.15;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+.hero h1 span {
+    color: #C68642;
+}
+
+.hero-desc {
+    color: #c9b8a8;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 28px;
+    width: 75%;
+    font-family: sans-serif;
+}
+
+.btn-hero {
+    background: #C68642;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 10%;
+    width: 55%;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    transition: 0.5s ease;
+}
+
+.btn-hero:hover {
+    background: #6b4420;
+    transition: 0.5s ease;
+}
+
+.btn-hero p {
+    margin-left: 10%;
+}
+
+.iconeSeta {
+    margin-left: 16%;
+    font-size: 120%;
+}
+
+
+
+
+#container-footer {
+    border: none;
+    background-color: #40241c;
+    padding: 6vh;
+    color: #F5E6D3;
+    text-align: center;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+
+#imagem {
+    width: 80%;
+    height: 80%;
+    border-radius: 15px;
+}
+
+/* Cor: #f4ece4 */
+
+/* ── Section ── */
+.cardapio {
+    display: flex;
+    gap: 20px;
+    padding: 40px 60px;
+    background-color: #f4ece4;
+}
+
+/* ── Cada card ── */
+.container {
+    flex: 1;
+    display: flex;
+    /* imagem + texto lado a lado */
+    flex-direction: row;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fbf6f1;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 3);
+}
+
+/* ── Lado da imagem ── */
+.card-image {
+    width: 48%;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* ── Lado do texto ── */
+.card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 24px 20px;
+    gap: 10px;
+}
+
+.card-icon img {
+    width: 35%;
+}
+
+.card-icon {
+    height: auto;
+    width: 100%;
+}
+
+.card-content h2 {
+    font-size: 300%;
+    color: #402825;
+}
+
+.card-divider {
+    width: 15%;
+    height: 0.5%;
+    background: #C68642;
+    border-radius: 2px;
+}
+
+.card-content p {
+    font-size: 1.10rem;
+    color: #4B2E2B;
+    line-height: 1.6;
+    font-family: sans-serif;
+    width: 60%;
+}
+
+.btn-card {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+    padding: 4% 9%;
+    background: #C68642;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+    transition: 0.5s ease;
+}
+
+.btn-card:hover {
+    background: #6b4420;
+    transition: 0.5s ease;
+}
+
+.banner-cafe {
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0),
+            /* escuro na esquerda */
+            rgba(0, 0, 0, 0.8)
+            /* transparente na direita */
+        ),
+        url("img/coffee_and_cupcake_high_res.png");
+
+    background-size: cover;
+    height: 75vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    /* texto à direita */
+    padding: 40px 80px;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4%;
+}
+
+.banner-badge {
+    font-size: 1rem;
+    font-weight: bold;
+    /* font-family: sans-serif; */
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #C68642;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.banner-content h2 {
+    font-size: 3.7rem;
+    color: #F5E6D3;
+    line-height: 1.2;
+    margin-top: 10%;
+}
+
+.banner-content h2 span {
+    color: #C68642;
+    /* laranja dourado igual ao design */
+}
+
+.banner-desc {
+    font-size: 1.3rem;
+    color: #d4b99a;
+    line-height: 1.6;
+    margin-top: 10%;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.itens {
+    height: 85vh;
+    background-color: #f4ece4;
+}
+
+#itensCacau {
+    width: 2%;
+}
+
+.itens-titulo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1%;
+    color: #8d5c27;
+    padding: 1%;
+    font-family: sans-serif;
+    letter-spacing: 5%;
+}
+
+.item-image img {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.itemContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.containerItem {
+    border: none;
+    border-radius: 20px;
+    width: 30%;
+    height: 60vh;
+    background-color: #fbf6f1;
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 3);
+    margin-top: 1%;
+}
+
+.itemTitu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itemTitu h2 {
+    margin-left: 5%;
+    color: #6b4420;
+}
+
+.coracao {
+    margin-right: 5%;
+    color: #A0522D;
+    font-size: 150%;
+    margin-top: 3%;
+}
+
+.itemDesc {
+    margin-left: 5%;
+    width: 65%;
+    color: #6b4420;
+    font-family: sans-serif;
+    font-size: 0.80rem;
+}
+
+.preco {
+    margin-left: 5%;
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.preco h2 {
+    color: #A0522D;
+}
+
+.butCar {
+    border-radius: 20px;
+    border: none;
+    background-color: #C68642;
+    margin-right: 8%;
+    padding: 10px 17px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.butCar:hover {
+    background-color: #6b4420;
+    transition: 0.5s ease;
+}
+
+.carrinho {
+    font-size: 150%;
+    color: #fbf6f1;
+}
+
+/* =============================================
+   MEDIA QUERIES RESPONSIVO
+   ============================================= */
+
+/* ──────────────────────────────────────────────
+   TABLET  (até 1024px)
+────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+
+    /* Header */
+    #header {
+        height: auto;
+        padding: 12px 20px;
+    }
+
+    #logo {
+        width: 30%;
+    }
+
+    #menu {
+        gap: 24px;
+        font-size: 78%;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 40px 32px;
+        height: auto;
+        min-height: 75vh;
+    }
+
+    .hero-text {
+        width: 55%;
+        margin-left: 2%;
+        margin-bottom: 5%;
+    }
+
+    .hero-badge {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2.6rem;
+        width: 120%;
+    }
+
+    .hero-desc {
+        width: 90%;
+    }
+
+    .btn-hero {
+        width: 65%;
+    }
+
+    /* Cardápio */
+    .cardapio {
+        flex-direction: column;
+        padding: 30px 32px;
+        gap: 24px;
+    }
+
+    .card-content h2 {
+        font-size: 200%;
+    }
+
+    .card-content p {
+        width: 85%;
+    }
+
+    /* Banner */
+    .banner-cafe {
+        padding: 40px 40px;
+        height: 60vh;
+    }
+
+    .banner-content h2 {
+        font-size: 2.8rem;
+    }
+
+    /* Itens mais vendidos */
+    .itens {
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    #itensCacau {
+        width: 3%;
+    }
+
+    .itemContent {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 0 24px;
+        justify-content: center;
+    }
+
+    .containerItem {
+        width: 45%;
+        height: auto;
+        min-height: 380px;
+    }
+
+    .preco {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+}
+
+
+/* ──────────────────────────────────────────────
+   MOBILE  (até 768px)
+────────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+    /* Header */
+    #header {
+        flex-direction: column;
+        align-items: center;
+        padding: 14px 16px;
+        height: auto;
+        gap: 12px;
+    }
+
+    #logo {
+        width: 55%;
+    }
+
+    #menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+        font-size: 75%;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .icone {
+        margin-left: 0;
+        font-size: 200%;
+    }
+
+    /* Hero */
+    .hero {
+        background: linear-gradient(to bottom,
+                rgba(0, 0, 0, 0.75),
+                rgba(0, 0, 0, 0.35)
+            ),
+            url("img/chocolate_cake_high_res.png");
+        background-size: cover;
+        background-position: center;
+        padding: 40px 20px;
+        height: auto;
+        min-height: 88vh;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-text {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-badge {
+        justify-content: center;
+        font-size: 0.85rem;
+        width: 100%;
+    }
+
+    #iconeCacau {
+        width: 20px;
+    }
+
+    .hero h1 {
+        font-size: clamp(24px, 7vw, 36px);
+        width: 100%;
+    }
+
+    .coracaoHero {
+        font-size: 2.2rem;
+    }
+
+    .hero-desc {
+        width: 90%;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .btn-hero {
+        width: 72%;
+        justify-content: center;
+    }
+
+    .btn-hero p {
+        margin-left: 0;
+    }
+
+    .iconeSeta {
+        margin-left: 8px;
+    }
+
+    /* Cardápio */
+    .cardapio {
+        flex-direction: column;
+        padding: 24px 16px;
+        gap: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .card-image {
+        width: 100%;
+        height: 220px;
+    }
+
+    .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card-content {
+        padding: 20px 16px;
+        align-items: flex-start;
+    }
+
+    .card-content h2 {
+        font-size: 180%;
+    }
+
+    .card-content p {
+        width: 100%;
+    }
+
+    .card-icon img {
+        width: 20%;
+    }
+
+    /* Banner */
+    .banner-cafe {
+        background: linear-gradient(to bottom,
+                rgba(0, 0, 0, 0.1),
+                rgba(0, 0, 0, 0.88)
+            ),
+            url("img/coffee_and_cupcake_high_res.png");
+        background-size: cover;
+        background-position: center;
+        height: auto;
+        min-height: 65vh;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 30px 24px;
+    }
+
+    .banner-content {
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .banner-content h2 {
+        font-size: 2rem;
+        margin-top: 14px;
+    }
+
+    .banner-desc {
+        font-size: 1rem;
+        margin-top: 14px;
+    }
+
+    /* Itens mais vendidos */
+    .itens {
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    .itens-titulo {
+        padding: 20px 16px 10px;
+        gap: 2%;
+    }
+
+    #itensCacau {
+        width: 24px;
+    }
+
+    .itemContent {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 16px;
+        gap: 20px;
+    }
+
+    .containerItem {
+        width: 100%;
+        height: auto;
+    }
+
+    .item-image img {
+        width: 100%;
+        max-height: 210px;
+        object-fit: cover;
+    }
+
+    .itemTitu h2 {
+        font-size: 1.1rem;
+        margin-top: 8px;
+    }
+
+    .itemDesc {
+        width: 85%;
+        font-size: 0.85rem;
+        margin-top: 6px;
+    }
+
+    .preco {
+        margin-top: 12px;
+        margin-bottom: 14px;
+        align-items: center;
+    }
+
+    .preco h2 {
+        font-size: 1.2rem;
+    }
+
+    /* Footer */
+    #container-footer {
+        font-size: 90%;
+        padding: 4vh 5vw;
+        line-height: 1.7;
+    }
+}
+
+
+/* ──────────────────────────────────────────────
+   MOBILE PEQUENO  (até 480px)
+────────────────────────────────────────────── */
+@media (max-width: 480px) {
+    
+}
