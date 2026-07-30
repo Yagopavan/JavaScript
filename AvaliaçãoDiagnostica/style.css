@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #eef2ff 0%, #ffffff 100%);
+    color: #222;
+}
+.eu {
+    border-radius: 0 0 24px 24px;
+    text-align: center;
+    width: 100%;
+    padding: 32px 20px;
+    background: linear-gradient(135deg, #5b72ff 0%, #8f9bff 100%);
+    box-shadow: 0 12px 30px rgba(91, 114, 255, 0.24);
+}
+.eu h1 {
+    color: #fff;
+    font-size: 2.6rem;
+    letter-spacing: 0.04em;
+    margin: 0;
+}
+.minha-foto {
+    width: 250px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 25px;
+}
+.perfil-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.sobre-eu {
+    max-width: 600px;
+    background-color: #f8f8ff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+.sobre-eu h1 {
+    margin-bottom: 12px;
+}
+.sobre-eu p {
+    line-height: 1.6;
+}
+.github-card {
+    max-width: 460px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(34, 34, 34, 0.08);
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.github-card h2 {
+    margin: 0 0 16px;
+    font-size: 1.2rem;
+    color: #333;
+}
+.github-stats {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
