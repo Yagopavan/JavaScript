@@ -6,31 +6,49 @@
     <title>Avaliação Diagnóstica</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="ChatGPT Image 30 de jul. de 2026, 14_11_45.png">
 </head>
 <body>
     <header class="eu">
         <h1>Yago</h1>
     </header>
-    <div class="perfil-container">
-        <img src="IMG_1675.jpeg" alt="minha-foto" class="minha-foto">
-        <main class="sobre-eu">
-            <h1>Um pouco sobre mim!</h1>
-            <p>Me chamo Yago e tenho 17 anos. Sou apaixonado por tecnologia e carros e estou cursando o ensino médio. Atualmente, estou focado em me preparar para uma carreira na área de tecnologia, aprendendo novas habilidades e buscando oportunidades para crescer nesse setor.</p>
-        </main>
-        <div class="github-card">
-            <h2>GitHub status</h2>
-            <img
-                id="github-stats-img"
-                class="github-stats"
-                src="https://github-readme-stats.vercel.app/api?username=yagopavan&show_icons=true&theme=transparent"
-                alt="GitHub Stats"
-                onerror="this.style.display='none'; document.getElementById('github-error').style.display='block';">
-            <div id="github-error" class="github-error" style="display:none;">
-                Não foi possível carregar o GitHub status.<br>
-                <a href="https://github.com/yagopavan" target="_blank" rel="noopener noreferrer">Ver perfil no GitHub</a>
-            </div>
-        </div>
-    </div>
+    <main class="perfil-container">
+        <img src="IMG_1675.jpeg" alt="Foto de Yago" class="minha-foto">
+        <section class="sobre-eu">
+            <h2>Um pouco sobre mim!</h2>
+            <p>Me chamo Yago e tenho 17 anos. Sou apaixonado por tecnologia e carros e estou cursando o ensino médio. Atualmente, estou focado em me preparar para uma carreira na área de tecnologia, aprendendo novas habilidades e buscando oportunidades para crescer nesse setor. Pretendo fazer uma boa faculdade para me especializar na área, ter contato com pessoas que já são da area para poder aprender com eles e de certa maneira poder me preparar com as dicas deles para quando eu entrar no mercado de trabalho saber exatamente oque eu quero e oque eu preciso para tornar aquilo realidade! </p>
+        </section>
+        <aside class="github-card">
+            <img id="avatar" alt="Avatar do perfil GitHub de Yago">
+            <h3 id="nome"></h3>
+            <p>📦 Repositórios: <span id="repos"></span></p>
+            <p>👥 Seguidores: <span id="seguidores"></span></p>
+            <a id="perfil" target="_blank" rel="noopener noreferrer">Ver GitHub</a>
+        </aside>
+    </main>
+
+    <script>
+    fetch("https://api.github.com/users/Yagopavan")
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("avatar").src = data.avatar_url;
+        document.getElementById("nome").textContent = data.name || data.login;
+        document.getElementById("repos").textContent = data.public_repos;
+        document.getElementById("seguidores").textContent = data.followers;
+        document.getElementById("perfil").href = data.html_url;
+    });
+    </script>
+
+    <section class="contato">
+        <h2>Contato</h2>
+        <form action="salvarContato.php" method="POST">
+            <input type="text" name="nome" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu e-mail" required>
+            <input type="text" name="assunto" placeholder="Assunto" required>
+            <textarea name="mensagem" placeholder="Digite sua mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
     
 </body>
 </html>
