@@ -20,9 +20,15 @@
         <div class="github-card">
             <h2>GitHub status</h2>
             <img
+                id="github-stats-img"
                 class="github-stats"
                 src="https://github-readme-stats.vercel.app/api?username=yagopavan&show_icons=true&theme=transparent"
-                alt="GitHub Stats">
+                alt="GitHub Stats"
+                onerror="this.style.display='none'; document.getElementById('github-error').style.display='block';">
+            <div id="github-error" class="github-error" style="display:none;">
+                Não foi possível carregar o GitHub status.<br>
+                <a href="https://github.com/yagopavan" target="_blank" rel="noopener noreferrer">Ver perfil no GitHub</a>
+            </div>
         </div>
     </div>
     
