@@ -66,6 +66,20 @@ body {
     font-size: 1.2rem;
     color: #333;
 }
+.github-error {
+    text-align: center;
+    color: #5b5b5b;
+    font-size: 0.96rem;
+}
+.github-error a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #5b72ff;
+    text-decoration: none;
+}
+.github-error a:hover {
+    text-decoration: underline;
+}
 .github-stats {
     width: 100%;
     height: auto;
