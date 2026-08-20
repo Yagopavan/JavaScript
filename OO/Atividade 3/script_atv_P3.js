@@ -27,16 +27,12 @@ class Estoque {
         this.produtos.push(produto);
     }
 
-    removerProduto(indice) {
-        this.produtos.splice(indice, 1);
-    }
-
     exibirNaTela() {
 
         const resultado = document.querySelector("#resultado");
         resultado.innerHTML = "";
 
-        this.produtos.forEach((produto, indice) => {
+        this.produtos.forEach(produto => {
 
             resultado.innerHTML += `
                 <div class="produto">
@@ -45,7 +41,10 @@ class Estoque {
                     <p>Categoria: ${produto.categoria}</p>
                     <p>Desconto: ${produto.desconto}%</p>
                     <p>Preço Final: R$ ${produto.aplicarDesconto()}</p>
-                    <button class="excluir-produto" data-indice="${indice}">Excluir</button>
+
+                    <button class="excluir-produto" data-indice="${indice}">
+                Excluir
+            </button>
                 </div>
             `;
 
@@ -54,14 +53,6 @@ class Estoque {
 }
 
 const estoque = new Estoque();
-
-document.querySelector("#resultado").addEventListener("click", (evento) => {
-    if (!evento.target.classList.contains("excluir-produto")) return;
-
-    const indice = Number(evento.target.dataset.indice);
-    estoque.removerProduto(indice);
-    estoque.exibirNaTela();
-});
 
 botaoCadastro.addEventListener("click", () => {
 
@@ -73,5 +64,14 @@ botaoCadastro.addEventListener("click", () => {
     );
 
     estoque.adicionarProduto(produto);
+    estoque.exibirNaTela();
+});
+
+document.querySelector("#resultado").addEventListener("click", (evento) => {
+    if (!evento.target.classList.contains("excluir-produto")) return;
+
+    const indice = Number(evento.target.dataset.indice);
+
+    estoque.removerProduto(indice);
     estoque.exibirNaTela();
 });
