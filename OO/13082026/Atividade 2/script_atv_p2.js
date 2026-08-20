@@ -3,6 +3,7 @@ const preco = document.querySelector("#preco");
 const categoria = document.querySelector("#categoria");
 const desconto = document.querySelector("#desconto");
 const botaoCadastro = document.querySelector("#botaoCadastro");
+const chaveLocalStorage = "produtos";
 
 class Produto {
     constructor(nome, preco, categoria, desconto) {
@@ -20,15 +21,27 @@ class Produto {
 class Estoque {
 
     constructor() {
-        this.produtos = [];
+        const produtosSalvos = JSON.parse(localStorage.getItem(chaveLocalStorage)) || [];
+        this.produtos = produtosSalvos.map((produto) => new Produto(
+            produto.nome,
+            produto.preco,
+            produto.categoria,
+            produto.desconto
+        ));
     }
 
     adicionarProduto(produto) {
         this.produtos.push(produto);
+        this.salvarProdutos();
     }
 
     removerProduto(indice) {
         this.produtos.splice(indice, 1);
+        this.salvarProdutos();
+    }
+
+    salvarProdutos() {
+        localStorage.setItem(chaveLocalStorage, JSON.stringify(this.produtos));
     }
 
     exibirNaTela() {
@@ -55,6 +68,8 @@ class Estoque {
 
 const estoque = new Estoque();
 
+estoque.exibirNaTela();
+
 document.querySelector("#resultado").addEventListener("click", (evento) => {
     if (!evento.target.classList.contains("excluir-produto")) return;
 
@@ -74,4 +89,10 @@ botaoCadastro.addEventListener("click", () => {
 
     estoque.adicionarProduto(produto);
     estoque.exibirNaTela();
+
+    nome.value = "";
+    preco.value = "";
+    categoria.value = "";
+    desconto.value = "";
+    nome.focus();
 });

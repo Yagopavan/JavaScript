@@ -1,56 +1,44 @@
+class Produto {
+    constructor(nome, preco, categoria, desconto) {
+        this.nome = nome;
+        this.preco = preco;
+        this.categoria = categoria;
+        this.desconto = desconto;
+    }
+
+    aplicarDesconto() {
+        return this.preco - (this.preco * this.desconto / 100);
+    }
+
+    exibirNaTela() {
+
+        const resultado = document.querySelector("#resultado");
+
+        
+
+            resultado.innerHTML = `
+            <p><strong>Nome:</strong> ${this.nome} </p>
+            <p><strong>Preço:</strong> ${this.preco} </p>
+            <p><strong>Categoria:</strong> ${this.categoria} </p>
+            <p><strong>Desconto:</strong> ${this.desconto} </p>
+            <p><strong>Preço Final:</strong> ${this.aplicarDesconto()} % </p>
+            
+            `;
+    }
+}
+
+
+
+
 const nome = document.querySelector("#nome");
 const preco = document.querySelector("#preco");
 const categoria = document.querySelector("#categoria");
 const desconto = document.querySelector("#desconto");
 const botaoCadastro = document.querySelector("#botaoCadastro");
 
-class Produto {
-    constructor(nome, preco, categoria, desconto) {
-        this.nome = nome;
-        this.preco = Number(preco);
-        this.categoria = categoria;
-        this.desconto = Number(desconto);
-    }
 
-    aplicarDesconto() {
-        return this.preco - (this.preco * this.desconto / 100);
-    }
-}
 
-class Estoque {
-
-    constructor() {
-        this.produtos = [];
-    }
-
-    adicionarProduto(produto) {
-        this.produtos = [produto];
-    }
-
-    exibirNaTela() {
-
-        const resultado = document.querySelector("#resultado");
-        resultado.innerHTML = "";
-
-        this.produtos.forEach(produto => {
-
-            resultado.innerHTML += `
-                <div class="produto">
-                    <p>Produto: ${produto.nome}</p>
-                    <p>Preço: R$ ${produto.preco}</p>
-                    <p>Categoria: ${produto.categoria}</p>
-                    <p>Desconto: ${produto.desconto}%</p>
-                    <p>Preço Final: R$ ${produto.aplicarDesconto()}</p>
-                </div>
-            `;
-
-        });
-    }
-}
-
-const estoque = new Estoque();
-
-botaoCadastro.addEventListener("click", () => {
+botaoCadastro.addEventListener("click", function()  {
 
     const produto = new Produto(
         nome.value,
@@ -59,6 +47,28 @@ botaoCadastro.addEventListener("click", () => {
         desconto.value
     );
 
-    estoque.adicionarProduto(produto);
-    estoque.exibirNaTela();
+    produto.aplicarDesconto();
+    localStorage.setItem("produto", JSON.stringify(produto));
+    produto.exibirNaTela();
+    nome.value = "";
+    preco.value = "";
+    categoria.value = "";
+    desconto.value = "";
+    nome.focus();
+    
 });
+
+const Dados = localStorage.getItem("produto");
+
+if (Dados) {
+    const produtoSalvo = JSON.parse(Dados);
+
+    const produto = new Produto(
+        produtoSalvo.nome,
+        produtoSalvo.preco,
+        produtoSalvo.categoria,
+        produtoSalvo.desconto
+    );  
+
+    produto.exibirNaTela();
+};

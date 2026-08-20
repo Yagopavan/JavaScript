@@ -1,0 +1,38 @@
+.container {
+    border: 2px solid lightgray;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 400px;
+    justify-content: center;
+    margin-left: 30%;
+    margin-top: 10%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 5px;
+    width: 50%;
+}
+
+#resultado {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    color: #4CAF50;
+    font-weight: bold;
+}
