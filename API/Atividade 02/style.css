@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.container {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #bbb;
+}
+
+h1 {
+    color: #0b6594;
+    margin-top: 0;
+}
+
+h2 {
+    color: #0b6594;
+    font-size: 20px;
+}
+
+section {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0b6594;
+    color: white;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #888;
+    cursor: default;
+}
+
+.resultado, #mensagemCamera {
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
+video {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    margin-top: 15px;
+    background-color: #222;
+}
