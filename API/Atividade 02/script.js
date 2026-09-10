@@ -2,6 +2,9 @@ const btnLocalizacao = document.querySelector("#btnLocalizacao");
 const resultadoLocalizacao = document.querySelector("#resultadoLocalizacao");
 const btnCamera = document.querySelector("#btnCamera");
 const video = document.querySelector("#camera");
+const canvas = document.querySelector("#canvas");
+const foto = document.querySelector("#foto");
+const btnTirarFoto = document.querySelector("#btnTirarFoto");
 const mensagemCamera = document.querySelector("#mensagemCamera");
 
 btnLocalizacao.addEventListener("click", function () {
@@ -42,3 +45,24 @@ btnCamera.addEventListener("click", function () {
             mensagemCamera.textContent = "Não foi possível acessar a câmera. Verifique a permissão do navegador.";
         });
 });
+
+btnTirarFoto.addEventListener("click", function () {
+    
+
+    canvas.width = video.clientWidth;
+    canvas.height = video.clientHeight;
+
+    const contexto = canvas.getContext("2d");
+
+    contexto.drawImage(
+        video,
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+    foto.src = canvas.toDataURL("image/png");
+    mensagemCamera.textContent = "Foto tirada com sucesso.";
+    foto.style.display = "block";
+})
