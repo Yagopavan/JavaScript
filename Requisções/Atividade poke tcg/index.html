@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pokémon TCG Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Pokémon TCG Explorer</h1>
+        <p>Consulte cartas utilizando a API pública Pokémon TCG</p>
+    </header>
+
+    <main>
+
+        <section class="controle">
+            <input
+                type="search"
+                id="nomePokemon"
+                placeholder="Digite o nome do Pokémon"
+                aria-label="Nome do Pokémon"
+            >
+            <button id="btnConsultar">
+                Pesquisar cartas
+            </button>
+        </section>
+
+        <p id="status"></p>
+
+        <section id="resultado" class="cards">
+            <!-- As cartas serão inseridas aqui pelo JavaScript -->
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

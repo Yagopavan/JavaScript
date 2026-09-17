@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f8;
+    color: #222;
+}
+
+header {
+    background: linear-gradient(135deg, #e3350d, #cc0000);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 17px;
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.controle {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.controle input {
+    width: min(100%, 300px);
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+#status {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+.card h2 {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.erro {
+    color: #c00;
+    text-align: center;
+}
+
